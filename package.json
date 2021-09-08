@@ -17,7 +17,7 @@
     "start": "node ./dist/Server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-backend": " tsc",
-    "build-frontend": "cd front-end && npm i && npm i -g react-scripts",
+    "build-frontend": "cd frontend && npm i && npm i -g react-scripts",
     "build": "npm run build-backend && echo Finished building backend! && npm run build-frontend && echo Finished building frontend!"
   },
   "repository": {
