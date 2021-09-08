@@ -15,7 +15,6 @@ class App {
   public startServer(): void {
     try {
       this.initializeFrontend();
-
       this.listen();
     } catch (error) {
       console.error(`Error initializing server: ${error}`);
@@ -24,7 +23,7 @@ class App {
   }
 
   public initializeFrontend(): void {
-    this.app.use(express.static("../frontend/build"));
+    this.app.use(express.static("./frontend/build"));
   }
 
   private listen(): void {
