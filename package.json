@@ -14,8 +14,12 @@
     "@types/express": "^4.17.13"
   },
   "scripts": {
+    "start": "npm run build && node ./dist/Server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "tsc && pm2 start dist/Server.js"
+    "build-backend": " tsc",
+    "build-frontend": "cd front-end && npm i && npm i -g react-scripts",
+    "build": "npm run clean && npm run build-backend && echo Finished building backend! && npm run build-frontend && echo Finished building frontend!",
+    "clean": "rimraf ./frontend/build"
   },
   "repository": {
     "type": "git",
