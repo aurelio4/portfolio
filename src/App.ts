@@ -9,7 +9,7 @@ class App {
 
   constructor() {
     this.app = express();
-    this.port = 3000;
+    this.port = process.env.PORT || 3000;
   }
 
   public startServer(): void {
@@ -28,7 +28,7 @@ class App {
 
   private listen(): void {
     this.server = this.app.listen(this.port);
-    console.error(`Server listening on port ${this.getServerPort()}`);
+    console.log(`Server listening on port ${this.getServerPort()}`);
   }
 
   public getServerPort(): number | null {
